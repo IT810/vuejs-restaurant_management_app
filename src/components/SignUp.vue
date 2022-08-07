@@ -30,6 +30,7 @@
                     this.nameInput = '';
                     this.emailInput = '';
                     this.passwordInput = '';
+                    this.$router.push({name:'Home'});
                 }
                 catch(ex){
                     console.log(ex);
