@@ -26,16 +26,19 @@
                 try{
                     var res = await axios.post('http://localhost:3001/users', { name: this.nameInput, email: this.emailInput, password: this.passwordInput});
                     console.log(res);
-                    alert("Sign up successfully !!!");
-                    this.nameInput = '';
-                    this.emailInput = '';
-                    this.passwordInput = '';
+                    localStorage.setItem("user-info", JSON.stringify(res.data));
                     this.$router.push({name:'Home'});
                 }
                 catch(ex){
                     console.log(ex);
-                    localStorage.setItem("user-info", JSON.stringify(res.data));
                 }
+            }
+        },
+        async mounted(){
+            // Check if user login, return homepage but not sign up. 
+            let user = await localStorage.getItem('user-info');
+            if(user != null){
+                this.$router.push({name:'Home'});
             }
         }
     }

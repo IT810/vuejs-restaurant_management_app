@@ -11,6 +11,12 @@
       "email": "dasdas",
       "password": "dsadas",
       "id": 2
+    },
+    {
+      "name": "df",
+      "email": "fsdfsd",
+      "password": "dsds",
+      "id": 3
     }
   ]
 }

@@ -4,7 +4,14 @@
 
 <script>
     export default{
-        name: 'HomePage'
+        name: 'HomePage',
+        async mouted(){
+            // Check if user do not login, return sign up but not homepage. 
+            let user = await localStorage.getItem('user-info');
+            if(user == null){
+                this.$router.push({name:'SignUp'});
+            }
+        }
     }
 </script>
 
