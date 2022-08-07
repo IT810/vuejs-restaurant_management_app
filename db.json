@@ -1,0 +1,14 @@
+{
+    "users":[
+        {
+            "name":"hung",
+            "email":"hungnguyen810@gmail.com",
+            "password":"123456"
+        },
+        {
+            "name":"hung",
+            "email":"hungnguyen810@gmail.com",
+            "password":"123456"
+        }
+    ]
+}
