@@ -19,6 +19,7 @@
                 <td>{{item.address}}</td>
                 <td>
                     <router-link :to="'/update/'+item.id">Update</router-link>
+                    <router-link :to="'/update/'+item.id">Delete</router-link>
                 </td>
             </tr>
         </tbody>

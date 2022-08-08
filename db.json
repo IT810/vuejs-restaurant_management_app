@@ -29,8 +29,8 @@
     {
       "id": 1,
       "name": "burger king",
-      "contact": 11111,
-      "address": "Noida sector 50"
+      "contact": "11111",
+      "address": "Noida sector"
     },
     {
       "id": 2,
@@ -45,21 +45,21 @@
       "address": "Delgi CP"
     },
     {
-      "name": "sdsad",
-      "contact": "đâsdasd",
-      "address": "đasad",
+      "name": "1",
+      "contact": "1",
+      "address": "1",
       "id": 3
     },
     {
-      "name": "đâsdasdasd",
-      "contact": "ádasdasda",
-      "address": "ádasdasd",
+      "name": "2",
+      "contact": "2",
+      "address": "2",
       "id": 4
     },
     {
-      "name": "ádsa",
-      "contact": "ádasd",
-      "address": "đâs",
+      "name": "3333",
+      "contact": "3333",
+      "address": "3333",
       "id": 5
     }
   ]
