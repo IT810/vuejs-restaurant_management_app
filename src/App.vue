@@ -17,7 +17,7 @@ export default {
   color: #2c3e50;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
 }
@@ -27,7 +27,8 @@ body{
 }
 
 .register input,
-.login input {
+.login input,
+.add input {
   width: 300px;
   height: 40px;
   padding-left: 40px;
@@ -39,7 +40,7 @@ body{
 }
 
 .register button,
-.login button {
+.login button, .add button {
   width: 350px;
   height: 40px;
   border: 1px solid skyblue;

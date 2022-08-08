@@ -29,7 +29,7 @@ export default {
                 var res = await axios.get(`http://localhost:3001/users?email=${this.emailInput}&password=${this.passwordInput}`);
                 var user = res.data; // get 'data' item in the above resource
                 if (user != null) {
-                    localStorage.setItem('user-info', JSON.stringify(user));
+                    localStorage.setItem('user-info', JSON.stringify(user[0]));
                     this.$router.push({ name: 'Home' });
                 }
             }
