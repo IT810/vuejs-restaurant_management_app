@@ -1,13 +1,15 @@
 <template>
-    <img class="logo" src="../assets/logo.png">
-    <h1>Login</h1>
-    <div class="login">
-        <input type="text" v-model="emailInput" placeholder="Enter Email" />
-        <input type="password" v-model="passwordInput" placeholder="Enter Password" />
-        <button @click="login()">Login</button>
-        <p>
-            <router-link to="/sign-up">Sign Up</router-link>
-        </p>
+    <div class="container">
+        <img class="logo" src="../assets/logo.png">
+        <h1>Login</h1>
+        <div class="login">
+            <input type="text" v-model="emailInput" placeholder="Enter Email" />
+            <input type="password" v-model="passwordInput" placeholder="Enter Password" />
+            <button @click="login()">Login</button>
+            <p>
+                <router-link to="/sign-up">Sign Up</router-link>
+            </p>
+        </div>
     </div>
 </template>
 
@@ -28,6 +30,7 @@ export default {
                 // get resource after using axios
                 var res = await axios.get(`http://localhost:3001/users?email=${this.emailInput}&password=${this.passwordInput}`);
                 var user = res.data; // get 'data' item in the above resource
+                console.log(user);
                 if (user != null) {
                     localStorage.setItem('user-info', JSON.stringify(user[0]));
                     this.$router.push({ name: 'Home' });

@@ -23,20 +23,13 @@
       "email": "sadasd",
       "password": "ádasdasad",
       "id": 4
-    }
-  ],
-  "restaurants": [
-    {
-      "name": "1",
-      "contact": "1",
-      "address": "1",
-      "id": 1
     },
     {
-      "name": "2",
-      "contact": "2",
-      "address": "2",
-      "id": 2
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 5
     }
-  ]
+  ],
+  "restaurants": []
 }

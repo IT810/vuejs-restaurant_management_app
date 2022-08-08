@@ -53,16 +53,17 @@ export default {
         loadData: async function(){
             // Check if user do not login, return sign up but not homepage. 
             let user = await localStorage.getItem('user-info');
-            this.userName = JSON.parse(user).name;
             if (user == null) {
-                this.$router.push({ name: "Login" });
+                this.$router.push({ name: 'Login' });
             }
-
-            let result = await axios.get('http://localhost:3001/restaurants');
-            this.restaurants = result.data;
+            else{
+                this.userName = JSON.parse(user).name;
+                let result = await axios.get('http://localhost:3001/restaurants');
+                this.restaurants = result.data;
+            }
         }
     },
-    async mounted() {
+    async created() {
         this.loadData();
     },
     components: { Header }
