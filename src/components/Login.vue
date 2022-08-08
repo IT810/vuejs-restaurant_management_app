@@ -25,7 +25,9 @@ export default {
     methods: {
         login: async function () {
             try {
-                var user = await (await axios.get(`http://localhost:3001/users?email=${this.emailInput}&password=${this.passwordInput}`)).data;
+                // get resource after using axios
+                var res = await axios.get(`http://localhost:3001/users?email=${this.emailInput}&password=${this.passwordInput}`);
+                var user = res.data; // get 'data' item in the above resource
                 if (user != null) {
                     localStorage.setItem('user-info', JSON.stringify(user));
                     this.$router.push({ name: 'Home' });
