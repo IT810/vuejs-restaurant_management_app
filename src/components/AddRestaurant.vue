@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import Header from './Header.vue'
 
 export default {
@@ -24,8 +25,18 @@ export default {
         }
     },
     methods:{
-        AddRestaurant: function(){
-            
+        AddRestaurant: async function(){
+            try{
+                console.warn(this.Restaurant);
+                var result = await axios.post('http://localhost:3001/restaurants', {name: this.Restaurant.name, contact: this.Restaurant.contact, address: this.Restaurant.address});
+                if(result.status == 201){
+                    this.$router.push({name:'Home'});
+                }
+                console.warn("result", result);
+            }   
+            catch(e){
+                console.log(e);
+            }
         }
     },
     async mounted() {
