@@ -24,5 +24,25 @@
       "password": "ádasdasad",
       "id": 4
     }
+  ],
+  "restaurants":[
+    {
+      "id":1,
+      "name":"burger king",
+      "contact":11111,
+      "address":"Noida sector 50"
+    },
+    {
+      "id":2,
+      "name":"dominos",
+      "contact":22222,
+      "address":"Gurgaon sector 20"
+    },
+    {
+      "id":2,
+      "name":"KFC",
+      "contact":33333,
+      "address":"Delgi CP"
+    }
   ]
 }
