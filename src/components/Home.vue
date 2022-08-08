@@ -19,7 +19,7 @@
                 <td>{{item.address}}</td>
                 <td>
                     <router-link :to="'/update/'+item.id">Update</router-link>
-                    <router-link :to="'/update/'+item.id">Delete</router-link>
+                    <button @click="deleteRestaurant(item.id)">Delete</button>
                 </td>
             </tr>
         </tbody>
@@ -37,16 +37,33 @@ export default {
             restaurants:[]
         }
     },
-    async mounted() {
-        // Check if user do not login, return sign up but not homepage. 
-        let user = await localStorage.getItem('user-info');
-        this.userName = JSON.parse(user).name;
-        if (user == null) {
-            this.$router.push({ name: "Login" });
-        }
+    methods:{
+        deleteRestaurant: async function(id){
+            try{
+                var result = await axios.delete('http://localhost:3001/restaurants/'+id);
+                if(result.status == 200){
+                    this.loadData();
+                }
+                console.warn("result", result);
+            }
+            catch(e){
+                console.log(e);
+            }
+        },
+        loadData: async function(){
+            // Check if user do not login, return sign up but not homepage. 
+            let user = await localStorage.getItem('user-info');
+            this.userName = JSON.parse(user).name;
+            if (user == null) {
+                this.$router.push({ name: "Login" });
+            }
 
-        let result = await axios.get('http://localhost:3001/restaurants');
-        this.restaurants = result.data;
+            let result = await axios.get('http://localhost:3001/restaurants');
+            this.restaurants = result.data;
+        }
+    },
+    async mounted() {
+        this.loadData();
     },
     components: { Header }
 }

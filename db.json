@@ -27,40 +27,16 @@
   ],
   "restaurants": [
     {
-      "name": "burger king",
-      "contact": "111111",
-      "address": "Noida sector",
-      "id": 1
-    },
-    {
-      "id": 2,
-      "name": "dominos",
-      "contact": 22222,
-      "address": "Gurgaon sector 20"
-    },
-    {
-      "id": 2,
-      "name": "KFC",
-      "contact": 33333,
-      "address": "Delgi CP"
-    },
-    {
       "name": "1",
       "contact": "1",
       "address": "1",
-      "id": 3
+      "id": 1
     },
     {
       "name": "2",
       "contact": "2",
       "address": "2",
-      "id": 4
-    },
-    {
-      "name": "3333",
-      "contact": "3333",
-      "address": "3333",
-      "id": 5
+      "id": 2
     }
   ]
 }
