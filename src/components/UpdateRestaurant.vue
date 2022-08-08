@@ -30,7 +30,7 @@ export default {
             {
                 console.warn(this.Restaurant);
                 var id = this.$route.params.id;
-                var result = await axios.patch('http://localhost:3001/restaurants/'+id, {
+                var result = await axios.put('http://localhost:3001/restaurants/'+id, {
                     name: this.Restaurant.name, 
                     contact: this.Restaurant.contact, 
                     address: this.Restaurant.address
